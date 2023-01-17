@@ -1,0 +1,34 @@
+https://www.kapilarya.com/how-to-turn-off-password-protected-sharing-in-windows-10
+1. run cmd as admin
+
+2. netsh winsock reset
+
+2. sc.exe config lanmanworkstation depend= bowser/mrxsmb10/nsi
+
+3. sc.exe config mrxsmb20 start= disabled
+
+4. Enabling NetBIOS over TCP/IP
+
+5. Editing the Hosts file located in c:\windows\system32\drivers\etc, added the IP address of your NAS Drive and its name
+
+Restart and check again.
+How to find out if SMBv2 is enabled on your PC
+SMB version 2 should be enabled by default on your Windows 10 installation, but you can check using these steps:
+
+Open Start.
+Search for PowerShell, right-click the top result, and select Run as administrator.
+Type the following command to check if SMBv2 is enabled and press Enter:
+
+Get-SmbServerConfiguration | Select EnableSMB2Protocol
+
+If the output returns True, then SMBv2 is enabled. If the output is False, use this command to enable it and press Enter:
+
+Set-SmbServerConfiguration –EnableSMB2Protocol $true
+
+
+
+
+
+tat password share 
+https://www.youtube.com/watch?v=SonK3uO8AkI
+set password GUEST --> okie

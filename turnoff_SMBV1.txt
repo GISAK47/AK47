@@ -1,0 +1,14 @@
+To Check SMB Protocol Enable-Disable Status Run below Command in Powershell:
+For SMB2:
+Get-SMBServerConfiguration | Select EnableSMB2Protocol
+For SMB1:
+Get-SMBServerConfiguration | Select EnableSMB1Protocol
+
+To Enable SMB2 Protocol, Use Below Command in Powershell:
+Set-SMBServerConfiguration -EnableSMB2Protocol $True
+
+To Enable SMB1 Protocol, Use Below Command in Powershell:
+Set-SMBServerConfiguration -EnableSMB1Protocol $True
+
+To Disable SMB, Just use False at place of True.
+Set-SMBServerConfiguration -EnableSMB1Protocol $False

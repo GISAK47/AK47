@@ -1,0 +1,1 @@
+ CMD administrator type bcdedit /set useplatformclock true" and press enter

@@ -1,0 +1,5 @@
+tắt defender win 10 home
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+đặt key mới tên DisableAntiSpyware, 
+chuyển value từ 1 thành 0
+restart máy
